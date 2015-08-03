@@ -1,0 +1,48 @@
+/*var tw *tar.Writer
+
+func visit(path string, info os.FileInfo, err error) error {
+	h, _ := tar.FileInfoHeader(info, path)
+	if info.IsDir() == true {
+		h.Name = path + "/"
+	} else {
+		h.Name = path
+	}
+
+	if err := tw.WriteHeader(h); err != nil {
+		return err
+	}
+
+	if info.IsDir() == false {
+		b, err := ioutil.ReadFile(path)
+		if err != nil {
+			return err
+		}
+
+		if _, err := tw.Write(b); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}*/
+
+/*
+	log.Printf("Archiving repository: %s", *repo.Name)
+
+	archive, err := os.Create("archive/" + *repo.Name + ".tar")
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	tw = tar.NewWriter(archive)
+
+	if err := filepath.Walk("repos/"+*repo.Name+".git", visit); err != nil {
+		log.Fatalln(err)
+	}
+
+	if err := tw.Close(); err != nil {
+		log.Fatalln(err)
+	}
+
+	log.Printf("Archiving %s finished", *repo.Name)
+*/
